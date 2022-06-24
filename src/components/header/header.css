@@ -19,3 +19,7 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .icon {
+    pointer-events: none;
+  }

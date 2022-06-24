@@ -1,16 +1,14 @@
 import './header.css';
 
-const header = () => {
-    const changeColors = () => {
-        console.log('works')
-    }
+const header = (props) => {
+
     return(
         <header className="header-bg">
             <div className='container'>
                 <div className='d-flex align-items-center justify-content-between'>
                     <a className='logo'>Colorized</a>
-                    <span className='reload' onClick={changeColors}>
-                        <i className="fa-solid fa-arrow-rotate-right"></i>
+                    <span className='reload' onClick={props.changeColors}>
+                        <i className="icon fa-solid fa-arrow-rotate-right"></i>
                     </span>
                 </div>
             </div>
