@@ -1,21 +1,6 @@
 .color {
     width: 100%;
 }
-.color-red {
-    background: #e74c3c;
-}
-
-.color-blue {
-    background: #3498db;
-}
-
-.color-green {
-    background: #2ecc71;
-}
-
-.color-yellow {
-    background: #f1c40f;
-}
 
 .lock-holder {
     background: rgba(0, 0, 0, .5);
@@ -23,4 +8,8 @@
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.icon {
+    pointer-events: none;
 }
