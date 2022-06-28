@@ -6,8 +6,9 @@ import randomColor from "randomcolor";
 
 function App() {
   const [color, setColor] = useState(['#3eed17', '#db3b6d', '#61f4b0', '#d33298']);
-  // const [isLocked, setLock] = useState(false);
-  const ref = useRef();
+  const [isLocked, setlocked] = useState(false);
+  const [icon, setIcon] = useState(['icon fa-solid fa-lock-open', 'icon fa-solid fa-lock-open', 'icon fa-solid fa-lock-open', 'icon fa-solid fa-lock-open']);
+  let currentEl = useRef();
 
   const colorsHandler = () => {
     const colors = [];
@@ -19,48 +20,48 @@ function App() {
      setColor([...colors])
 }
 
-useEffect( () => {
- 
-})
-
-// const lockHandler = (data) => {
-//   setLock(!isLocked);
-//   ref.current = data.target;
-// }
-
-const store = [
+const state = [
   {
       color: [
         {
+          id: 0,
+          color: color[0],
+          icon: icon[0]
+        },
+        {
           id: 1,
-          color: color[0]
+          color: color[1],
+          icon: icon[1]
         },
         {
           id: 2,
-          color: color[1]
+          color: color[2],
+          icon: icon[2]
         },
         {
           id: 3,
-          color: color[2]
-        },
-        {
-          id: 4,
-          color: color[3]
+          color: color[3],
+          icon: icon[3]
         }
       ]
   }
 ]
+
+const copyState = [...state];
+
+
+
+const lockHandler = (event) => {
+
+}
   
 
-  useEffect(() => {
- 
-  }); 
   
 
   return (
     <div className="App full-height ">
       <Header changeColors={colorsHandler} />
-      <Color colorsArray={store}   />
+      <Color lock={lockHandler} colorsArray={copyState}   />
     </div>
   );
 }
